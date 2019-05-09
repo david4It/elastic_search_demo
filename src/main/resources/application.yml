@@ -1,0 +1,24 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: elasticsearch
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: Passw0rd
+    url: jdbc:mysql://localhost:3306/search?characterEncoding=utf8&serverTimezone=UTC
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: localhost:9300
+
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          elasticsearch:
+            core: DEBUG
+
